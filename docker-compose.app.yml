@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  backend-api:
+    build:
+      context: .
+      dockerfile: app/backend/Dockerfile
+    ports:
+      - "8000:8000"  # Map to a specific port on host
+    volumes:
+      - shared-data:/app/data  # Use the same shared volume as Airflow
+    environment:
+      - PINECONE_API_KEY=${PINECONE_API_KEY:-your_pinecone_api_key}
+      - PINECONE_ENV=${PINECONE_ENV:-your_pinecone_environment}
+    depends_on:
+      - chroma-db
+
+  streamlit-frontend:
+    build:
+      context: .
+      dockerfile: app/frontend/Dockerfile  # Create this Dockerfile
+    ports:
+      - "8501:8501"  # Streamlit's default port
+    environment:
+      - BACKEND_URL=http://backend-api:8000
+    depends_on:
+      - backend-api
+
+  chroma-db:
+    image: ghcr.io/chroma-core/chroma:latest
+    volumes:
+      - shared-data:/chroma/chroma/data  # Use the shared volume
+    ports:
+      - "8001:8000"  # Map ChromaDB port to avoid conflict with API
+    environment:
+      - ALLOW_RESET=true
+      - CHROMA_SERVER_HOST=0.0.0.0
+      - CHROMA_SERVER_PORT=8000
+
+volumes:
+  shared-data:
+    external: true  # This tells Docker to use the volume created by the Airflow compose 
