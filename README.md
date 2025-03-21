@@ -72,14 +72,5 @@ This project implements a Retrieval-Augmented Generation (RAG) pipeline using Ap
 
 ---
 
-## **📌 Contributions**
-| **Member**   | **Contribution**                                                                          |
-|--------------|-------------------------------------------------------------------------------------------|
-| **Janvi** | **33%** – Handled PDF parsing strategies (Docling and Mistral OCR) and FastAPI integration and pinecone vector search. |
-| **Ketki** | **33%** – Responsible for data ingestion,  and integrating Chromadb for vector search. |
-| **Sahil** | **33%** – Focused on RAG implementation, Manual embeddings integration, and developing the Streamlit UI and Airflow orchestration. |
-
----
-
 ## **📌 Attestation**
 **WE CERTIFY THAT WE HAVE NOT USED ANY OTHER STUDENTS' WORK IN OUR ASSIGNMENT AND COMPLY WITH THE POLICIES OUTLINED IN THE STUDENT HANDBOOK.**
