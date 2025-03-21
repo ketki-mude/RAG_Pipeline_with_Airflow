@@ -32,8 +32,7 @@ This project implements a Retrieval-Augmented Generation (RAG) pipeline using Ap
 
 ## **📌 Architecture Diagram**
 <p align="center">
-  <img src="[https://your_link/architecture_diagram.jpg](https://github.com/ketki-mude/RAG_Pipeline_with_Airflow/blob/main/architecture 
-       diagram/pdf_scraper_rag_based.png)" alt="Architecture Diagram" width="600">
+  <img src="https://github.com/ketki-mude/RAG_Pipeline_with_Airflow/blob/main/architecture-diagram/pdf_scraper_rag_based.png" alt="Architecture Diagram" width="600">
 </p>
 
 ---
