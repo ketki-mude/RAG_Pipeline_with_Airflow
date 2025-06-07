@@ -8,7 +8,6 @@ This project implements a Retrieval-Augmented Generation (RAG) pipeline using Ap
 - **Streamlit:** [Application Link](http://34.21.56.116:8501)
 - **Airflow Dashboard:** [Airflow Link](http://34.21.56.116:8080)
 - **Backend:** [Backend Link](http://34.21.56.116:8000)
-- **Demo Video:** [YouTube Demo](https://youtu.be/7x4iwCADyJA)
 - **ChromaDB:** [ChromaDBLink](http://34.21.56.116:8001)
 - **Documentation:** [Codelab/Documentation Link](https://codelabs-preview.appspot.com/?file_id=1lXv5JZRfDRDjS80zOzsKx5Y2xpjeqESIqiHni75n_p8#4)
 
